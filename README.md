@@ -1,2 +1,52 @@
 # yst
-for a girl but now she have a boy friend
+print("for a girl but now she have a boy friend,she was my girl friend who I am very regretful for")
+
+
+
+states = {
+    'Oregon': 'OR',
+    'Florida': 'FL',
+    'California' :'CA',
+    'New Your': 'NY',
+    'Michigan': 'MI'
+}
+
+
+cities = {
+    'CA' : 'San Francisco',
+    'MI' : 'Detroit',
+    'FL' : 'Jacksonville'
+}
+
+cities['NY'] = 'New York'
+cities['OR'] = 'Portland'
+
+print('-' * 10)
+print("NY State has : ",cities['NY'])
+print("OR state has: ", cities['OR'])
+
+print('-' * 10)
+print("Michigan's abbreviation is: ", states['Michigan'])
+print("Florida's abbreviation is ", states['Florida'])
+
+print('-' * 10)
+for state, abbrev in list(states.items()):
+    print(f"{state} is abbreviated {abbrev}")
+
+print('-' * 10)
+for abbrev,city  in list(cities.items()):
+    print(f"{abbrev} has the city {city}")
+
+print('-' * 10)
+for state, abbrev in list(states.items()):
+    print(f"{state} is abbreviated {abbrev}")
+    print(f"and has city {cities[abbrev]}")
+
+print('-' * 10)
+state = states.get('Texas')
+
+if not states:
+    print("Sorry no Texas")
+
+city = cities.get('TX','Does Not Exist')
+print(f"The city for the state 'TX'is : {city}")
